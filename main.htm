@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: hsla(164, 23%, 41%, 0.578);
+    }
+
+    h2 {
+      text-align: center;
+      color:rgba(9, 121, 139, 0.879)
+    }
+    h3{
+        text-align: center;
+        color:rgba(9, 121, 139, 0.879)
+        
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: rgba(141, 211, 222, 0.884);
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+
+    .input-group label {
+      display: inline-block;
+      width: 100px;
+      vertical-align: top;
+    }
+
+    .input-group input[type="radio"],
+    .input-group input[type="checkbox"] {
+      display: inline-block;
+      margin-top: 5px;
+      margin-right: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .logo {
+      display: block;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    
+    .logo img {
+      width: 100px;
+      height: 100px;
+    }  
+    p{
+        text-align: center;
+        color: red;
+        font-weight: 900;
+        display: none;
+    }  
+  </style>
+
+</head>
+<body>
+    <div class="logo">
+        <img src="https://www.kindpng.com/picc/m/479-4793254_vit-university-logo-hd-png-download.png" alt="Logo 1">
+    </div>
+  <h2>REGISTRATION FORM</h2>
+  <h3>ROBOVITICS</h3>
+  
+  <p id="hidd">Your Form has successfully been Submitted !!</p>
+  <form>
+    <div class="input-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="input-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="input-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    
+    <div class="input-group">
+      <label for="gender">Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label><br>
+    </div>
+    
+    <div class="input-group">
+      <label for="interests">Interests:</label><br>
+      <input type="checkbox" id="programming" name="interests[]" value="programming">
+      <label for="programming">Programming</label><br>
+      <input type="checkbox" id="design" name="interests[]" value="design">
+      <label for="design">Design</label><br>
+      <input type="checkbox" id="gaming" name="interests[]" value="gaming">
+      <label for="gaming">Gaming</label><br>
+      <input type="checkbox" id="frontend" name="interests[]" value="frontend">
+      <label for="frontend">Frontend</label><br>
+      <input type="checkbox" id="fullstack" name="interests[]" value="fullstack">
+      <label for="fullstack">Full Stack</label><br>
+    </div>
+    
+    <div class="input-group">
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">--Select--</option>
+      <option value="au">Australia</option>
+      <option value="ca">Canada</option>
+      <option value="in">India</option>
+      <option value="pak">Pakistan</option>
+      <option value="np">Nepal</option>
+      <option value="rus">Russia</option>
+      <option value="uk">United Kingdom</option>
+      <option value="us">United States</option>
+      
+      </select>
+    </div>
+    
+    
+    <input type="submit" value="Register" id="SubB">
+  </form>
+ <script type="text/javascript">
+    document.getElementById('SubB').onclick = function(){
+        document.getElementById('hidd').style.display = "Block";
+
+    }
+ </script>
+</body>
+</html>
+
